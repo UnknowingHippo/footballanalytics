@@ -1,3 +1,5 @@
+###Hi###
+
 #Import the relevant modules.
 #Initial 5 modules are required to pull the information from Understat and build dataframes.
 #Final 2 are used to plot the graphs using matplotlib.
@@ -46,14 +48,14 @@ async def main():
         player_stats = player_stats[["date","season_int","season_id","time_flt","goals_flt","xG_flt","shots_flt"]]
         df = pd.DataFrame(player_stats)
         
-    #Analysing from 2015/16 onwards we can remove some 2014/15 data but sit require 15 data points before the seasons starts for the rolling average.
-    #Change order the dataframe by date
+    #For 2015/16 onwards, remove some 2014/15 data but still require 15 data points before the seasons for the rolling average.
+    #Change order the dataframe by date.
         
         df = df[:-20]
         df = df.sort_values(by=["date"],ascending=True)
         
-    #Building the rolling averages involves taking the sum of 15 matches of goals/xG/shots
-    #Then Diving that by the total minutes divided by 90 to get the p90 rolling average metric
+    #Building the rolling averages involves taking the sum of 15 matches of goals/xG/shots.
+    #Then Diving that by the total minutes divided by 90 to get the p90 rolling average metric.
         
         df["Goals_p90_Rolling_Average_15_Games"] = (df.iloc[:,4].rolling(window=15).sum()) / (df.iloc[:,3].rolling(window=15).sum() / 90)
         df["xG_p90_Rolling_Average_15_Games"] = (df.iloc[:,5].rolling(window=15).sum()) / (df.iloc[:,3].rolling(window=15).sum() / 90)
@@ -78,12 +80,13 @@ async def main():
         ax = plt.gca()
         ax.set(ylabel="xG/Goals p90",xlabel="Season",title="Harry Kane")
         
-    #Mark the x-axis with the seasons. Will need to identify in the dataframe the index number where the season changes. Can do the same with injuries.
+    #Mark the x-axis with the seasons. Identify in the dataframe the index number where the season changes. Can do this with injuries.
     #Invert the x-axis to show the oldest to the latest season.
     #Show the graph.   
         
         xticks([152,114,84,47,19],["2015/16", "2016/17", "2017/18","2018/19","2019/20"], ha="center")
-        #xticks([110,93,76,56,26,22,0],["Ankle Sep '16", "Ankle Mar '16", "Hamstring Oct '17", "Ankle Mar '18","Ankle Jan '19","Ankle Apr '19","Thigh Jan '20"], rotation = "30", ha="right")
+        '''xticks([110,93,76,56,26,22,0],["Ankle Sep '16", "Ankle Mar '16", "Hamstring Oct '17", "Ankle Mar '18","Ankle Jan '19", 
+        "Ankle Apr '19","Thigh Jan '20"], rotation = "30", ha="right")'''
         ax.invert_xaxis()
         plt.show()
         
