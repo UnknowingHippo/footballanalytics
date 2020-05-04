@@ -1,4 +1,5 @@
 #Import the relevant modules.
+#To install understat module use the following link: https://github.com/amosbastian/understat (Thanks Amos Bastian).
 #Initial 5 modules are required to pull the information from Understat and build dataframes.
 #Final 2 are used to plot the graphs using matplotlib.
 
