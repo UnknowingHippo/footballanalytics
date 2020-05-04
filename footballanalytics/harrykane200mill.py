@@ -1,5 +1,3 @@
-###Hi###
-
 #Import the relevant modules.
 #Initial 5 modules are required to pull the information from Understat and build dataframes.
 #Final 2 are used to plot the graphs using matplotlib.
