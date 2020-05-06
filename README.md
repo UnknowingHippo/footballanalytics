@@ -16,4 +16,4 @@ GitHub Pages:
 
 Blogs:
 
-Harry Kane £200 Million
+[Harry Kane £200 Million](https://medium.com/@jonathanchappell/harry-kane-the-200-million-man-337918d91801)
