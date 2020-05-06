@@ -1,6 +1,6 @@
 # footballanalytics
 
-Recently I've taken up learning python and have written my first football blog using the analysis.
+Recently I've taken up learning python and have written my first football blog delivering analysis using python.
 
 I wanted to thank a few people who's work I have been able to use as learning and build my own work:
 
