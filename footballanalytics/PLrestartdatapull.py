@@ -23,6 +23,7 @@ async def main():
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 
+
 #Need to clean the data in the exported table to conduct the analysis.
 #Main work here involves splitting out the goals and xG numbers as well as assigning them to the correct team. Use the text to columns feature in excel to do this.
 #The xlsx files on the github page show your the final output.
