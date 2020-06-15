@@ -66,18 +66,18 @@ async def main():
     #x-axis is the matches, this is taken from the index column of the dataframe.    
         
         plt.figure(figsize=[15,10])
-        plt.ylim(0, 1.5)
+        plt.ylim(2, 7)
         plt.xlim(0,152)
         plt.grid(True)
         
     #Plot the graphs with the rolling average. 
     #Plot the legend and label the graphs.    
         
-        plt.plot(df["Goals_p90_Rolling_Average_15_Games"],label='Goals p90 Rolling Avg.')
-        plt.plot(df["xG_p90_Rolling_Average_15_Games"],label='xG p90 Rolling Avg.')
+        plt.plot(df["Shots_p90_Rolling_Average_15_Games"],label='Shots p90 Rolling Avg.')
+        #plt.plot(df["xG_p90_Rolling_Average_15_Games"],label='xG p90 Rolling Avg.')
         plt.legend(loc=2)
         ax = plt.gca()
-        ax.set(ylabel="xG/Goals p90",xlabel="Season",title="Harry Kane")
+        ax.set(ylabel="Shots p90",xlabel="Season",title="Harry Kane")
         
     #Mark the x-axis with the seasons. Identify in the dataframe the index number where the season changes. Can do this with injuries.
     #Invert the x-axis to show the oldest to the latest season.
@@ -85,7 +85,7 @@ async def main():
         
         xticks([152,114,84,47,19],["2015/16", "2016/17", "2017/18","2018/19","2019/20"], ha="center")
         '''xticks([110,93,76,56,26,22,0],["Ankle Sep '16", "Ankle Mar '16", "Hamstring Oct '17", "Ankle Mar '18","Ankle Jan '19", 
-        "Ankle Apr '19","Thigh Jan '20"], rotation = "30", ha="right")'''
+        Ankle Apr '19","Thigh Jan '20"], rotation = "30", ha="right")'''
         ax.invert_xaxis()
         plt.show()
         
