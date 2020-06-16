@@ -10,10 +10,16 @@ I wanted to thank a few people who's work I have been able to use as learning an
 
 [Amos Bastian](https://github.com/amosbastian/understat)
 
+[Tom Whelan}(https://github.com/twhelan22)
+
 GitHub Pages:
 
 [Harry Kane £200 Million](https://github.com/UnknowingHippo/footballanalytics/blob/master/footballanalytics/harrykane200mill.py)
 
+[Premier League Restart]()
+
 Blogs:
 
 [Harry Kane £200 Million](https://medium.com/@jonathanchappell/harry-kane-the-200-million-man-337918d91801)
+
+[Premier League Restart]()
